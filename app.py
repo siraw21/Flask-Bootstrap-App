@@ -2,6 +2,7 @@ from flask import Flask, render_template, request
 import requests
 from config import NEWS_API_KEY
 
+
 app = Flask(__name__)
 
 # Homepage - Route
@@ -11,10 +12,9 @@ def index():
    url = f"https://newsapi.org/v2/everything?q={query}&apiKey={NEWS_API_KEY}"
    response = requests.get(url)
    news_data = response.json()
-   print(news_data)
+   # print(news_data)
 
-   return "Testing"
-
+   return render_template("index.html")
 
 
 
