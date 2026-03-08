@@ -12,9 +12,10 @@ def index():
    url = f"https://newsapi.org/v2/everything?q={query}&apiKey={NEWS_API_KEY}"
    response = requests.get(url)
    news_data = response.json()
-   # print(news_data)
+   articles = news_data.get('articles', [])
 
-   return render_template("index.html")
+   filtered_articles = [article for article in articles if "Yahoo" not in article["source"]["name"] and 'removed' not in article["title"].lower()]
+   return render_template("index.html", articles=filtered_articles, query=query)
 
 
 
