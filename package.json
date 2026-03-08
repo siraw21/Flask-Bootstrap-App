@@ -1,0 +1,11 @@
+{
+  "name": "Flask-Bootstrap-App",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:siraw21/Flask-Bootstrap-App.git",
+  "author": "Sirawdink Abayneh <sirawdinkabayneh77@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^5.3.8"
+  }
+}
